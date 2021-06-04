@@ -43,3 +43,5 @@ root                    (project root folder)
 * # TODO: Add names and emails here
 # CSE210-w7
 Elinore Wickard. ewickard@byui.edu
+
+David Swearingen  captainD375@yahoo.com
