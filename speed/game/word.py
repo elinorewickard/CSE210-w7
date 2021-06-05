@@ -48,3 +48,14 @@ class Word(Actor):
         position = Point(x, y)
         self.set_position(position)
         
+        
+    def delete_word(self):
+        """if the player enters the correct spelling for the word delete it and give points"""
+        
+        
+        """No Idea how to do this"""
+        
+       
+        
+    
+        
