@@ -26,12 +26,12 @@ class Director:
         Args:
             self (Director): an instance of Director.
         """
-        self._food = Food()
+        self._Word = Word()
         self._input_service = input_service
         self._keep_playing = True
         self._output_service = output_service
         self._score = Score()
-        self._snake = Snake()
+       
         
     def start_game(self):
         """Starts the game loop to control the sequence of play.
@@ -53,17 +53,17 @@ class Director:
             self (Director): An instance of Director.
         """
         direction = self._input_service.get_direction()
-        self._snake.move_head(direction)
+        
 
     def _do_updates(self):
         """Updates the important game information for each round of play. In 
-        this case, that means checking for a collision and updating the score.
+        this case, that means checking for a correct word typed and updating the score.
 
         Args:
             self (Director): An instance of Director.
         """
-        self._handle_body_collision()
-        self._handle_food_collision()
+        self.Word._Delete_word()
+        
         
     def _do_outputs(self):
         """Outputs the important game information for each round of play. In 
