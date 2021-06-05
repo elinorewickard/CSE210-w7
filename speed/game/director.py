@@ -47,12 +47,12 @@ class Director:
 
     def _get_inputs(self):
         """Gets the inputs at the beginning of each round of play. In this case,
-        that means getting the desired direction and moving the snake.
+        that means recvivng the typed word and checking for a matching word on screen.
 
         Args:
             self (Director): An instance of Director.
         """
-        direction = self._input_service.get_direction()
+        Letter = self._input_service.get_Letter()
         
 
     def _do_updates(self):
@@ -66,16 +66,13 @@ class Director:
         
         
     def _do_outputs(self):
-        """Outputs the important game information for each round of play. In 
-        this case, that means checking if there are stones left and declaring 
-        the winner.
+        """Outputs the important game information for each round of play.
 
         Args:
             self (Director): An instance of Director.
         """
         self._output_service.clear_screen()
-        self._output_service.draw_actor(self._food)
-        self._output_service.draw_actors(self._snake.get_all())
+        self._output_service.draw_actor(self._Word)
         self._output_service.draw_actor(self._score)
         self._output_service.flush_buffer()
 
