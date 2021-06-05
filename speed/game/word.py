@@ -3,14 +3,14 @@ from game import constants
 from game.actor import Actor
 from game.point import Point
 
-class Food(Actor):
-    """A nutritious substance that snake's like. The responsibility of Food is to keep track of its appearance and position. A Food can move around randomly if asked to do so. 
+class Word(Actor):
+    """The word that the player must type to score points. 
     
     Stereotype:
         Information Holder
 
     Attributes: 
-        _points (integer): The number of points the food is worth.
+        _points (integer): The number of points the Word is worth.
     """
     def __init__(self):
         """The class constructor. Invokes the superclass constructor, set's the 
@@ -26,21 +26,21 @@ class Food(Actor):
         self.reset()
     
     def get_points(self):
-        """Gets the points this food is worth.
+        """Gets the points this Word is worth.
         
         Args:
-            self (Food): an instance of Food.
+            self (Word): an instance of Word.
 
         Returns:
-            integer: The points this food is worth.
+            integer: The points this Word is worth.
         """
         return self._points
 
-    def reset(self):
-        """Resets the food by moving it to a random position within the boundaries of the screen and reassigning the points to a random number.
+    def Next_word(self):
+        """Resets the word bycalling a new one from the list and sending it down the screen.
         
         Args:
-            self (Food): an instance of Food.
+            self (Word): an instance of Word.
         """
         self._points = random.randint(1, 5)
         x = random.randint(1, constants.MAX_X - 2)
